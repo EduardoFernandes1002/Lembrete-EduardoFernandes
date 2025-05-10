@@ -6,14 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.lembrete_eduardofernandes.databinding.FragmentFirstBinding
+import androidx.navigation.fragment.findNavController
+import com.example.lembrete_eduardofernandes.databinding.FragmentLembreteBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment() {
+class LembreteFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentLembreteBinding? = null
 
     private lateinit var context: Context
 
@@ -26,7 +27,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentLembreteBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -35,12 +36,20 @@ class FirstFragment : Fragment() {
 
         context = requireContext()
 
+        val nome = arguments?.getString("NOME_DIGITADO")
+
+        binding.texto.setText(nome)
+
         val sharedP = context.getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
         val edit = sharedP.edit()
 
         val lembrete = sharedP.getString("texts", "Sem lembrete")
 
         binding.textInputEditText.setText(lembrete.toString())
+
+        binding.btnVoltar.setOnClickListener {
+            findNavController().navigate(R.id.action_lembrete_to_login)
+        }
 
         binding.btnSalvar.setOnClickListener {
             val texto = binding.textInputEditText.text.toString()
