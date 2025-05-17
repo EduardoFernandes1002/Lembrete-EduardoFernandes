@@ -8,16 +8,30 @@
     <fragment
         android:id="@+id/LoginFragment"
         android:name="com.example.lembrete_eduardofernandes.LoginFragment"
-        android:label="@string/login_fragment_label"
+        android:label="Login Fragment"
         tools:layout="@layout/fragment_login">
 
-        <argument
-            android:name= "NOME_DIGITADO"
-            app:argType="string"
-            />
+        <action
+            android:id="@+id/action_login_to_cadastro"
+            app:destination="@id/CadastroFragment" />
+
         <action
             android:id="@+id/action_login_to_lembrete"
             app:destination="@id/LembreteFragment" />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/CadastroFragment"
+        android:name="com.example.lembrete_eduardofernandes.CadastroFragment"
+        android:label="@string/cadastro_fragment_label"
+        tools:layout="@layout/fragment_cadastro">
+
+        <action
+            android:id="@+id/action_cadastro_to_login"
+            app:destination="@id/LoginFragment" />
     </fragment>
 
     <fragment
@@ -28,7 +42,9 @@
 
     <action
         android:id="@+id/action_lembrete_to_login"
-        app:destination="@id/LoginFragment" />
+        app:destination="@id/LoginFragment"
+        />
     </fragment>
+
 
 </navigation>

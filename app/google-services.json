@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "305204051857",
+    "project_id": "projeto-lembrete-42ec3",
+    "storage_bucket": "projeto-lembrete-42ec3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305204051857:android:c87dd6b2a6c38d0359a430",
+        "android_client_info": {
+          "package_name": "com.example.lembrete_eduardofernandes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305204051857-i8s5b3u0sjobkm4hhu8ptv8b3v96jj2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfUnFS6QH59OpVLX5wx_fPDEmVjHDje74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305204051857-i8s5b3u0sjobkm4hhu8ptv8b3v96jj2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

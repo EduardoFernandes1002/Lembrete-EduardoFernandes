@@ -36,10 +36,6 @@ class LembreteFragment : Fragment() {
 
         context = requireContext()
 
-        val nome = arguments?.getString("NOME_DIGITADO")
-
-        binding.texto.setText(nome)
-
         val sharedP = context.getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
         val edit = sharedP.edit()
 
