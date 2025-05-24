@@ -10,7 +10,10 @@
         android:name="com.example.lembrete_eduardofernandes.LoginFragment"
         android:label="Login Fragment"
         tools:layout="@layout/fragment_login">
-
+        <argument
+            android:name="TOKEN"
+            app:argType="string"
+            />
         <action
             android:id="@+id/action_login_to_cadastro"
             app:destination="@id/CadastroFragment" />

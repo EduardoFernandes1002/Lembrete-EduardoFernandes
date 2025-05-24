@@ -44,6 +44,7 @@ class LembreteFragment : Fragment() {
         binding.textInputEditText.setText(lembrete.toString())
 
         binding.btnVoltar.setOnClickListener {
+            edit.remove("token").apply()
             findNavController().navigate(R.id.action_lembrete_to_login)
         }
 
@@ -53,8 +54,8 @@ class LembreteFragment : Fragment() {
             edit.putString("texts", texto).apply()
         }
 
-        binding.btnDeletar.setOnClickListener{
-            edit.clear().commit()
+        binding.btnDeletar.setOnClickListener {
+            edit.remove("texts").commit()
             binding.textInputEditText.text?.clear()
         }
 

@@ -1,7 +1,6 @@
 package com.example.lembrete_eduardofernandes
 
 
-
 import android.view.LayoutInflater
 import android.os.Bundle
 import android.view.View
@@ -31,8 +30,7 @@ class CadastroFragment : Fragment() {
             findNavController().navigate(R.id.action_cadastro_to_login)
         }
 
-        binding.btnCadastrar.setOnClickListener{
-
+        binding.btnCadastrar.setOnClickListener {
 
             findNavController().navigate(R.id.action_cadastro_to_login)
         }
