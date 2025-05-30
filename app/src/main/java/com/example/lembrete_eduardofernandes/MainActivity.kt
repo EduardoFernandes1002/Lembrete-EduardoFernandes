@@ -3,7 +3,7 @@ package com.example.lembrete_eduardofernandes
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.lembrete_eduardofernandes.databinding.ActivityMainBinding
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -24,15 +24,23 @@ class MainActivity : AppCompatActivity() {
 
         val token = sharedPref.getString("token", "")
 
-        if (!token.isNullOrEmpty()) {
-            val userToken = auth.currentUser?.getIdToken(true)
-            if (token.toString() == userToken.toString()) {
-            }
-        }
-
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        if (!token.isNullOrEmpty()) {
+//            auth.currentUser?.getIdToken(true)?.addOnCompleteListener { tokenTaks ->
+//                val idToken = tokenTaks.result?.token
+                navController.navigate(R.id.action_login_to_lembrete)
+//                if (token == idToken) {
+//
+//                }
+//            }
+
+        }
 
     }
 

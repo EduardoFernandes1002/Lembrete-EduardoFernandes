@@ -28,7 +28,6 @@ class LoginFragment : Fragment() {
     ): View {
 
         auth = Firebase.auth
-
         context = requireContext()
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
@@ -44,7 +43,7 @@ class LoginFragment : Fragment() {
 
             val email = binding.editTxtEmail.text.toString()
             val password = binding.editTxtPassword.text.toString()
-            auth.signInWithEmailAndPassword(email, password).addOnSuccessListener { taskListener ->
+            auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
                 val user = auth.currentUser
                 user?.getIdToken(true)?.addOnCompleteListener { tokenTask ->
                     if (tokenTask.isSuccessful) {
