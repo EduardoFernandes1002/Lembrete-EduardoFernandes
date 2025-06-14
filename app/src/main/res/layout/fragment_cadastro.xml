@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textViewLegal"
+        android:id="@+id/textViewCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -28,7 +28,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLegal" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastro" />
 
     <EditText
         android:id="@+id/editTxtEmailCadastro"
@@ -55,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewNomeCadastro"
         android:layout_width="68dp"
         android:layout_height="25dp"
         android:text="Nome:"
@@ -66,7 +66,7 @@
         app:layout_constraintStart_toStartOf="@+id/editTxtNomeCadastro" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewEmailCadastro"
         android:layout_width="68dp"
         android:layout_height="25dp"
         android:text="Email:"
@@ -89,7 +89,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextPasswordCadastro"
         android:layout_width="382dp"
         android:layout_height="60dp"
         android:layout_marginTop="65dp"
@@ -101,12 +101,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editTxtEmailCadastro" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewSenhaCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Senha:"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordCadastro"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordCadastro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

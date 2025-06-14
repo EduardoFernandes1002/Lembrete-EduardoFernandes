@@ -39,7 +39,7 @@ class CadastroFragment : Fragment() {
         binding.btnCadastrar.setOnClickListener {
 
             val email = binding.editTxtEmailCadastro.text.toString()
-            val password = binding.editTextTextPassword.text.toString()
+            val password = binding.editTextPasswordCadastro.text.toString()
 
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->

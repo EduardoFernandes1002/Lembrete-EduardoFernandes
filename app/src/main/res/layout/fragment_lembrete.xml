@@ -12,11 +12,11 @@
         android:layout_width="370dp"
         android:layout_height="560dp"
         android:layout_marginTop="32dp"
-        android:hint="hint"
+        android:hint="Digite um lembrete!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texto" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewBemVindo" />
 
     <Button
         android:id="@+id/btnDeletar"
@@ -52,12 +52,12 @@
         app:layout_constraintVertical_bias="0.333" />
 
     <TextView
-        android:id="@+id/texto"
+        android:id="@+id/textViewBemVindo"
         android:layout_width="287dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:text="Ola"
+        android:text="Bem Vindo"
         android:textSize="22sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
