@@ -39,7 +39,7 @@ class LembreteFragment : Fragment() {
         val sharedP = context.getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
         val edit = sharedP.edit()
 
-        val lembrete = sharedP.getString("texts", "Sem lembrete")
+        val lembrete = sharedP.getString("texts", "")
 
         binding.textInputEditText.setText(lembrete.toString())
 

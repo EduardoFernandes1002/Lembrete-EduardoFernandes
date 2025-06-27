@@ -120,8 +120,180 @@ class ExampleInstrumentedTest {
 
         /**
          *
-         *  Fragment Login novamente
+         *  Fragment Login novamente!
          *
          */
+
+        Thread.sleep(4000)
+
+        onView(withId(R.id.textViewLogin)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewLogin)).check(matches(withText("Login")))
+
+        onView(withId(R.id.textViewEmail)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewEmail)).check(matches(withText("Email:")))
+
+        onView(withId(R.id.editTxtEmail)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtEmail)).check(matches(withHint("Email")))
+
+        onView(withId(R.id.textViewSenha)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewSenha)).check(matches(withText("Senha:")))
+
+        onView(withId(R.id.editTxtPassword)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtPassword)).check(matches(withHint("Senha")))
+
+        onView(withId(R.id.btnLogin)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnLogin)).check(matches(withText("Entrar")))
+
+        onView(withId(R.id.btnCadastro)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnCadastro)).check(matches(withText("Cadastre-se")))
+
+        // Inputs e Login
+
+        onView(withId(R.id.editTxtEmail)).perform(typeText("Thiago@teste.com"), ViewActions.closeSoftKeyboard())
+        onView(withId(R.id.editTxtEmail)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtEmail)).check(matches(withText("Thiago@teste.com")))
+
+        onView(withId(R.id.editTxtPassword)).perform(typeText("Dias123"), ViewActions.closeSoftKeyboard())
+        onView(withId(R.id.editTxtPassword)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtPassword)).check(matches(withText("Dias123")))
+
+        onView(withId(R.id.btnLogin)).perform(click())
+
+
+        /**
+         *
+         *  Na Fragment de Lembrete
+         *
+         */
+
+        Thread.sleep(4000)
+
+
+        onView(withId(R.id.btnVoltar)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnVoltar)).check(matches(withText("Voltar")))
+
+        onView(withId(R.id.textViewBemVindo)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewBemVindo)).check(matches(withText("Bem Vindo")))
+
+        onView(withId(R.id.textInputEditText)).check(matches((isDisplayed())))
+        onView(withId(R.id.textInputEditText)).check(matches((withHint("Digite um lembrete!"))))
+
+        onView(withId(R.id.btnDeletar)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnDeletar)).check(matches(withText("Deletar")))
+
+        onView(withId(R.id.btnSalvar)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnSalvar)).check(matches(withText("Salvar")))
+
+        // Escrevendo e salvando lembrete
+
+        onView(withId(R.id.textInputEditText)).perform(typeText("TesteLembrete"), ViewActions.closeSoftKeyboard())
+        onView(withId(R.id.textInputEditText)).check(matches((isDisplayed())))
+        onView(withId(R.id.textInputEditText)).check(matches((withText("TesteLembrete"))))
+
+        onView(withId(R.id.btnSalvar)).perform(click())
+
+        onView(withId(R.id.textInputEditText)).check(matches((isDisplayed())))
+        onView(withId(R.id.textInputEditText)).check(matches((withText("TesteLembrete"))))
+
+
+        onView(withId(R.id.btnVoltar)).perform(click())
+
+        /**
+         *
+         *  Volta ao login e relogando para verificar
+         *  se em lembrete exibe o lembrete!
+         *
+         */
+
+        //reLogin
+
+        Thread.sleep(4000)
+
+        onView(withId(R.id.textViewLogin)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewLogin)).check(matches(withText("Login")))
+
+        onView(withId(R.id.textViewEmail)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewEmail)).check(matches(withText("Email:")))
+
+        onView(withId(R.id.editTxtEmail)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtEmail)).check(matches(withHint("Email")))
+
+        onView(withId(R.id.textViewSenha)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewSenha)).check(matches(withText("Senha:")))
+
+        onView(withId(R.id.editTxtPassword)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtPassword)).check(matches(withHint("Senha")))
+
+        onView(withId(R.id.btnLogin)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnLogin)).check(matches(withText("Entrar")))
+
+        onView(withId(R.id.btnCadastro)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnCadastro)).check(matches(withText("Cadastre-se")))
+
+        // Inputs e Login
+
+        onView(withId(R.id.editTxtEmail)).perform(typeText("Thiago@teste.com"), ViewActions.closeSoftKeyboard())
+        onView(withId(R.id.editTxtEmail)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtEmail)).check(matches(withText("Thiago@teste.com")))
+
+        onView(withId(R.id.editTxtPassword)).perform(typeText("Dias123"), ViewActions.closeSoftKeyboard())
+        onView(withId(R.id.editTxtPassword)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtPassword)).check(matches(withText("Dias123")))
+
+        onView(withId(R.id.btnLogin)).perform(click())
+
+        // lembrete de novo:
+
+        Thread.sleep(4000)
+
+        onView(withId(R.id.btnVoltar)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnVoltar)).check(matches(withText("Voltar")))
+
+        onView(withId(R.id.textViewBemVindo)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewBemVindo)).check(matches(withText("Bem Vindo")))
+
+        onView(withId(R.id.textInputEditText)).check(matches((isDisplayed())))
+        onView(withId(R.id.textInputEditText)).check(matches((withText("TesteLembrete"))))
+
+        onView(withId(R.id.btnDeletar)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnDeletar)).check(matches(withText("Deletar")))
+
+        onView(withId(R.id.btnSalvar)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnSalvar)).check(matches(withText("Salvar")))
+
+        onView(withId(R.id.btnDeletar)).perform(click())
+
+        onView(withId(R.id.textInputEditText)).check(matches((isDisplayed())))
+        onView(withId(R.id.textInputEditText)).check(matches((withText(""))))
+
+        onView(withId(R.id.btnVoltar)).perform(click())
+
+        Thread.sleep(4000)
+
+        // Ultima verificação login por que sim!
+
+        onView(withId(R.id.textViewLogin)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewLogin)).check(matches(withText("Login")))
+
+        onView(withId(R.id.textViewEmail)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewEmail)).check(matches(withText("Email:")))
+
+        onView(withId(R.id.editTxtEmail)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtEmail)).check(matches(withHint("Email")))
+
+        onView(withId(R.id.textViewSenha)).check(matches(isDisplayed()))
+        onView(withId(R.id.textViewSenha)).check(matches(withText("Senha:")))
+
+        onView(withId(R.id.editTxtPassword)).check(matches(isDisplayed()))
+        onView(withId(R.id.editTxtPassword)).check(matches(withHint("Senha")))
+
+        onView(withId(R.id.btnLogin)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnLogin)).check(matches(withText("Entrar")))
+
+        onView(withId(R.id.btnCadastro)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnCadastro)).check(matches(withText("Cadastre-se")))
+
+
+
     }
 }
